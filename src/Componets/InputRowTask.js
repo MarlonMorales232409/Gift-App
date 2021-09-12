@@ -1,12 +1,12 @@
 import React from 'react'
 
-export const InputRowTask = ({data}) => {
+export const InputRowTask = ({ data, setDataToEdit }) => {
   return (
     <>
       <tr>
-        <td>{data}</td>
+        <td>{data.task}</td>
         <td>
-          <button>Editar</button>
+          <button onClick={()=> setDataToEdit(data)} >Editar</button>
           <button>Eliminar</button>
         </td>
       </tr>

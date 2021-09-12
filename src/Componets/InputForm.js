@@ -1,12 +1,20 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 const initialDB = {
   task: "",
   id: null,
 }
 
-const InputForm = ({createData, updateData}) => {
+const InputForm = ({ createData, updateData, setDataToEdit, dataToEdit }) => {
   const [newTask, setNewTask] = useState(initialDB);
+
+  useEffect(() => {
+    if(dataToEdit){
+        setNewTask(dataToEdit)
+    }else{
+        setNewTask(initialDB)
+    }
+  }, [dataToEdit])
   
   const handleChange = (e) => {
     setNewTask({
@@ -35,7 +43,8 @@ const InputForm = ({createData, updateData}) => {
   };
 
   const handleReset = (e)=> {
-    setNewTask(initialDB)
+    setNewTask(initialDB);
+    setDataToEdit(null);
   }
 
   return (

@@ -9,6 +9,7 @@ const taskDB = [
 
 function App() {
 
+  const [dataToEdit, setDataToEdit] = useState(null)
   const [dataDB, setDataDB] = useState(taskDB)
 
   const createData = (data) => {
@@ -16,7 +17,10 @@ function App() {
     setDataDB([...dataDB, data])
   };
 
-  const updateData = () => {};
+  const updateData = (data) => {
+    let newData = dataDB.map(el => el.id === data.id ? data : el)
+    setDataDB(newData)
+  };
 
   const delData = () => {};
 
@@ -26,9 +30,10 @@ function App() {
       <InputForm 
         createData={createData}
         updateData={updateData} 
-
+        setDataToEdit={setDataToEdit}
+        dataToEdit={dataToEdit}
       />
-      <InputTask data={dataDB}/>
+      <InputTask data={dataDB} setDataToEdit={setDataToEdit} />
     </div>
   );
 }
