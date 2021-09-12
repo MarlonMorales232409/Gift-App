@@ -22,7 +22,16 @@ function App() {
     setDataDB(newData)
   };
 
-  const delData = () => {};
+  const delData = (data) => {
+    let confirm = window.confirm("Estas seguro que deseas borrar esta tarea");
+    if(confirm){
+      let delElement = dataDB.filter(el => el.id !== data);
+      setDataDB(delElement)
+    }else{
+      alert("Se ha cancelado la operacion");
+      return
+    }
+  };
 
   return (
     <div className="App">
@@ -33,7 +42,7 @@ function App() {
         setDataToEdit={setDataToEdit}
         dataToEdit={dataToEdit}
       />
-      <InputTask data={dataDB} setDataToEdit={setDataToEdit} />
+      <InputTask data={dataDB} setDataToEdit={setDataToEdit} delData={delData} />
     </div>
   );
 }
