@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+
+import InputForm from './Componets/InputForm';
+import InputTask from './Componets/InputTask';
+
+const taskDB = [
+  
+]
 
 function App() {
+
+  const [dataDB, setDataDB] = useState(taskDB)
+
+  const createData = (data) => {
+    data.id = Date.now();
+    setDataDB([...dataDB, data])
+  };
+
+  const updateData = () => {};
+
+  const delData = () => {};
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h2>Lista de cosas por hacer</h2>
+      <InputForm 
+        createData={createData}
+        updateData={updateData} 
+
+      />
+      <InputTask data={dataDB}/>
     </div>
   );
 }
