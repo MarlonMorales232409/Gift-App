@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react'
 const initialDB = {
   task: "",
   id: null,
+  complete: false
 }
 
 const InputForm = ({ createData, updateData, setDataToEdit, dataToEdit }) => {
@@ -57,7 +58,7 @@ const InputForm = ({ createData, updateData, setDataToEdit, dataToEdit }) => {
           onChange = {handleChange}
           value = {newTask.task}
           />
-          <input type='submit' value='Ingresar tarea'/>
+          <input type='submit' value={dataToEdit ? "Actualizar tarea" : "Agregar tarea"}/>
           <input type='reset' value='Limpiar' onClick={handleReset}/>
       </form>
     </div>

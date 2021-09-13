@@ -1,7 +1,7 @@
 import React from "react";
 import { InputRowTask } from "./InputRowTask";
 
-const InputTask = ({ data, setDataToEdit, delData }) => {
+const InputTask = ({ data, setDataToEdit, delData, setTaskComplete }) => {
   return (
     <table>
       <thead>
@@ -19,7 +19,8 @@ const InputTask = ({ data, setDataToEdit, delData }) => {
             </tr>
           )
           : (
-            data.map(el => <InputRowTask key={el.id} data={el} setDataToEdit={setDataToEdit} delData={delData} />)
+            data.map(el => <InputRowTask key={el.id} data={el} 
+            setDataToEdit={setDataToEdit} delData={delData} setTaskComplete={setTaskComplete}/>)
           )
         }
       </tbody>
