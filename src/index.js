@@ -1,13 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import GifExpertApp from "./GifExpertApp";
+import "./index.css";
+import "animate.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <GifExpertApp />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
