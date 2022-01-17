@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It shloud show it correctle should show it correctly 1`] = `
+<Fragment>
+  <h2
+    className="category-h2 animate__animated animate__bounce animate__fadeIn"
+  >
+    vader
+  </h2>
+  <Loader />
+  <hr
+    className="category-divisor"
+  />
+  <div
+    className="gift-container"
+  />
+</Fragment>
+`;
+
+exports[`It shloud show it correctle should show it correctly when data is coming from useFetch 1`] = `
+<Fragment>
+  <h2
+    className="category-h2 animate__animated animate__bounce animate__fadeIn"
+  >
+    vader
+  </h2>
+  <hr
+    className="category-divisor"
+  />
+  <div
+    className="gift-container"
+  >
+    <GifGridItem
+      category="vader"
+      id={123}
+      key="123"
+      title="algo"
+      url="https://algo/algomas.jpg"
+    />
+    <GifGridItem
+      category="vader"
+      id={123}
+      key="123"
+      title="algo"
+      url="https://algo/algomas.jpg"
+    />
+    <GifGridItem
+      category="vader"
+      id={123}
+      key="123"
+      title="algo"
+      url="https://algo/algomas.jpg"
+    />
+  </div>
+</Fragment>
+`;

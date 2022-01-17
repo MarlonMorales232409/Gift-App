@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should mathc with the component <GifExpertApp/> should match the snapshopt if exist categories 1`] = `
+<Fragment>
+  <h2
+    className="title-app"
+  >
+    Gift Expert App
+  </h2>
+  <hr />
+  <div
+    className="gift-main"
+  >
+    <AddCategory
+      setCategories={[Function]}
+    />
+    <GifGrid
+      category="retsuko"
+      key="retsuko"
+    />
+    <GifGrid
+      category="vader"
+      key="vader"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`Should mathc with the component <GifExpertApp/> should mathc with the component <GifExpertApp/> 1`] = `
+<Fragment>
+  <h2
+    className="title-app"
+  >
+    Gift Expert App
+  </h2>
+  <hr />
+  <div
+    className="gift-main"
+  >
+    <AddCategory
+      setCategories={[Function]}
+    />
+  </div>
+</Fragment>
+`;

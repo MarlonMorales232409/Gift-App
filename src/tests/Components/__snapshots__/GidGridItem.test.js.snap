@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing in GiftGridItem Component Must to show the component correctly 1`] = `
+<div
+  className="gift animate__animated animate__bounce animate__fadeIn"
+>
+  <img
+    alt="Testing"
+    className="gift-image"
+    src="https://localhost/img/1"
+  />
+  <p
+    className="gift-title"
+  >
+    Testing
+  </p>
+</div>
+`;

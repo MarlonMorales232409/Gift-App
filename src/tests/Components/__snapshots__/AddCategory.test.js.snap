@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The component should be show it correctly It should show it corretly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <p />
+  <input
+    onChange={[Function]}
+    placeholder="Try a Categorie like \\"One Punch\\""
+    type="text"
+    value=""
+  />
+</form>
+`;
